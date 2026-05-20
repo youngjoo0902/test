@@ -20,9 +20,9 @@
             <li>안되면 환경변수 확인 : 시스템보호 > 고급 > 환경변수 > 시스템변수에 Path 항목 찾아서, 편집 누르고 node 경로 제대로 들어갔는지 확인. 안들어갔으면 수동으로 node 실제 경로 쳐넣기</li>
           </ul>
         </li>
-        <li>vite 설치 : npm create vite@latest 기본값으로 전부 엔터 엔터 치면 설치됨
+        <li>vite 설치 : 프로젝트 폴더로 이동한 후, npm create vite@latest 기본값으로 전부 엔터 엔터 치면 설치됨 (해당 프로젝트만 적용됨)
           <ul type="disc">
-            <li>바이트설치안되면?	powershell 관리자 권한으로 열어서, Set-ExecutionPolicy RemoteSigned 입력하고, y 입력 (권한문제)</li>
+            <li>바이트 설치 안되면?	powershell 관리자 권한으로 열어서, Set-ExecutionPolicy RemoteSigned 입력하고, y 입력 (권한문제)</li>
             <li>서버실행 npm run dev 쳐서 로컬호스트 실행</li>
             <li>로컬호스트 실행안되면, cd 경로 맞는지 확인</li>
           </ul>
@@ -38,7 +38,7 @@
                 base: '/test/'<br>
               })
             </li>
-            <li>커밋 푸시하고, npm run deploy 실행한다.</li>
+            <li>커밋 푸시하고, npm run deploy 실행한다. github 에서 actions 탭 보면, 상태를 확인할 수 있다.</li>
           </ul>
         </li>
         <li>git 설치 - <a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a> 에서 윈도우용 깃 다운받아 설치</li>
@@ -47,6 +47,7 @@
             <ul type="disc">
               <li>git config --global user.name "본인깃아이디" 입력</li>
               <li>git config --global user.email "본인깃이메일" 입력</li>
+              <li>커밋, 푸시 테스트 해보기</li>
             </ul>
           </li>
           <li>git 호스팅 방법

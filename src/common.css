@@ -42,5 +42,3 @@ body .v_btm	{vertical-align:bottom;}
 .skipnav a	{display:block; color:#fff; font-weight:bold; width:0; height:0; line-height:0; font-size:0;}
 .skipnav a:focus, .skip a:active	{display:block; padding:5px 0; width:auto; height:auto; line-height:1.5; font-size:14px;}
 input:focus, button:focus, select:focus, textarea:focus	{}
-
-body {border:1px solid blue;}

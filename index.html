@@ -12,25 +12,44 @@
     <h1>프로젝트 세팅</h1>
     <ol>
         <li>
-          노드설치 - <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a> 에서 윈도우용 노드 다운받아 설치
-          <ul>
+          node 설치 - <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a> 에서 윈도우용 노드 다운받아 설치
+          <ul type="disc">
             <li>노드확인 : 터미널에 npm -v 쳐서, 노드 설치되었는지 확인</li>
             <li>안되면 환경변수 확인 : 시스템보호 > 고급 > 환경변수 > 시스템변수에 Path 항목 찾아서, 편집 누르고 node 경로 제대로 들어갔는지 확인. 안들어갔으면 수동으로 node 실제 경로 쳐넣기</li>
           </ul>
         </li>
-        <li>바이트설치 : npm create vite@latest 기본값으로 전부 엔터 엔터 치면 설치됨
-          <ul>
+        <li>vite 설치 : npm create vite@latest 기본값으로 전부 엔터 엔터 치면 설치됨
+          <ul type="disc">
             <li>바이트설치안되면?	powershell 관리자 권한으로 열어서, Set-ExecutionPolicy RemoteSigned 입력하고, y 입력 (권한문제)</li>
             <li>서버실행 npm run dev 쳐서 로컬호스트 실행</li>
             <li>로컬호스트 실행안되면, cd 경로 맞는지 확인</li>
           </ul>
         </li>
-        <li>깃설치 - <a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a> 에서 윈도우용 깃 다운받아 설치</li>
+        <li>vite 빌드와 배포 : npm install gh-pages --save-dev 설치
+          <ul type="disc">
+            <li>package.json 파일에 "scripts" 객체에 아래 프로퍼티 추가.<br>"deploy": "gh-pages -d dist"</li>
+            <li>npm run build 하면 dist 폴더가 생성됨</li>
+            <li>github 는 root를 바라보기 때문에, root 에 vite.config.js 와 package.json 파일이 있어야 한다.</li>
+            <li>vite.config.js 파일의 내용에 이걸 넣는다.<br>
+              import { defineConfig } from 'vite'<br>
+              export default defineConfig({<br>
+                base: '/test/'<br>
+              })
+            </li>
+            <li>커밋 푸시하고, npm run deploy 실행한다.</li>
+          </ul>
+        </li>
+        <li>git 설치 - <a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a> 에서 윈도우용 깃 다운받아 설치</li>
         <li>vscode 확장프로그램에서 git graph 설치</li>
-        <li>깃 저장소 연결 : 터미널에 git remote add origin https://github.com/아이디/저장소명.git
-            <ul>
+        <li>git 저장소 연결 : 터미널에 git remote add origin https://github.com/아이디/저장소명.git
+            <ul type="disc">
               <li>git config --global user.name "본인깃아이디" 입력</li>
               <li>git config --global user.email "본인깃이메일" 입력</li>
+            </ul>
+          </li>
+          <li>git 호스팅 방법
+            <ul type="disc">
+              <li>repository 들어가서 settings 탭 > Pages > Source 에서 Build and deployment 선택 > main 선택 / root 선택 > save</li>
             </ul>
           </li>
         </li>
